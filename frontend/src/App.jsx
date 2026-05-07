@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const API_URL = 'http://127.0.0.1:5000/api/notes';
+const API_URL = import.meta.env.VITE_API_URL || '/_/backend/api/notes';
 
 function App() {
   const [notes, setNotes] = useState([]);
