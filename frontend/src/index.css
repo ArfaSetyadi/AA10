@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #1f108e;
+  --on-primary: #ffffff;
+  --primary-container: #3730a3;
+  --on-primary-container: #a9a7ff;
+  --secondary: #4648d4;
+  --on-secondary: #ffffff;
+  --secondary-container: #6063ee;
+  --on-secondary-container: #fffbff;
+  --surface: #f8f9fa;
+  --surface-dim: #d9dadb;
+  --surface-bright: #f8f9fa;
+  --surface-container-low: #f0f1f2;
+  --surface-container: #edeeef;
+  --surface-container-high: #e7e8e9;
+  --surface-container-highest: #e1e3e4;
+  --on-surface: #191c1d;
+  --on-surface-variant: #464553;
+  --outline: #777584;
+  --outline-variant: #c8c4d5;
+  --background: #f8f9fa;
+  --error: #ba1a1a;
+  
+  --font-family: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--on-surface);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-container);
+  color: var(--on-primary);
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--outline-variant);
+  padding: 10px 20px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-container);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  padding: 8px 12px;
+}
+
+.btn-ghost:hover {
+  background-color: var(--surface-container);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--outline-variant);
+  font-family: var(--font-family);
+  font-size: 16px;
+  background-color: var(--surface-container-low);
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
